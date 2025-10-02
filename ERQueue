@@ -1,0 +1,47 @@
+package labExam;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.PriorityQueue;
+
+public class ERQueue {
+
+	PriorityQueue<Patient> queue = new PriorityQueue<>();
+
+	public void arrive(String name, int priority, String condition, String time) {
+		Patient patient = new Patient(name, priority, condition, time);
+		queue.add(patient);
+	}
+
+	public void treatNext() {
+		if(queue.isEmpty()) {
+			System.out.println("No patients to treat.");
+		} else {
+			 Patient treated = queue.poll();
+             System.out.println(">>> Treating patient now...");
+             System.out.println("Treated: " + treated);
+             System.out.println();
+		}
+	}
+	public void displayQueue() {
+        System.out.println("=== UPDATED QUEUE ===");
+        System.out.println("Patients Waiting: " + queue.size());
+        System.out.println();
+
+        List<Patient> sortedList = new ArrayList<>(queue);
+        Collections.sort(sortedList);
+
+        for (int i = 0; i < sortedList.size(); i++) {
+            System.out.println((i + 1) + ". " + sortedList.get(i));
+        }
+    }
+}
+
+
+
+
+
+
+
+

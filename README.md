@@ -1,6 +1,6 @@
 # Priority-Queue
 
-- A simple PriorityQueue java program.
+- A Emergency Room Triage System implemented using the PriorityQueue in java.
 
 # Sample run
 

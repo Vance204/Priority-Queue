@@ -1,5 +1,7 @@
 # Priority-Queue
 
+- A simple PriorityQueue java program.
+
 # Sample run
 
 === UPDATED QUEUE ===
